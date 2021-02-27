@@ -10,10 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Convid</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>SATGAS COVID-19 MUHKA</title>
+    <meta name="keywords" content="SATGAS COVID-19 SMK Muhammadiyah Karangmojo">
+    <meta name="description" content="Aplikasi Screening Tim SATGAS COVID-19 SMK Muhammadiyah Karangmojo">
+    <meta name="author" content="Eko Cahyanto">
     <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/fronted/css/bootstrap.min.css">
     <!-- style css -->
