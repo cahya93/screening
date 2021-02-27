@@ -9,7 +9,7 @@
                         <div class="togle_">
                             <div class="menu_main">
                                 <ul>
-                                    <li><a href="#">Login</a></li>
+                                    <li><a href="<?= base_url('login'); ?>">Login</a></li>
                                     <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
@@ -22,6 +22,7 @@
                                 <a href="about.html">About</a>
                                 <a href="doctors.html">Doctors</a>
                                 <a href="news.html">News</a>
+                                <a href="<?= base_url('login'); ?>">Login</a>
                             </div>
                         </div>
                         <span class="navbar-toggler-icon"></span>
