@@ -77,7 +77,12 @@
                             <td><?= tanggal($d['date']); ?></td>
                             <td><?= $d['nama']; ?></td>
                             <td><?= $d['alamat']; ?></td>
-                            <td><?= $d['kategori']; ?></td>
+                            <td>
+                                <?php
+                                $kategori = $this->db->get_where('tbl_kategori', ['id' => $d['kategori']])->row_array();
+                                echo $kategori['nama'];
+                                ?>
+                            </td>
                             <td><?= $d['kelas']; ?></td>
                             <td>Cetak</td>
                         </tr>
