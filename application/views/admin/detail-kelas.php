@@ -11,6 +11,7 @@
                     <th>Nama</th>
                     <th>Kelas</th>
                     <th>Status</th>
+                    <th>Rincian</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -32,6 +33,14 @@
                             } else {
                                 echo "<span class='btn btn-warning'>$result Siswa</span>";
                             }
+                            ?>
+                        </td>
+                        <td>
+                            <?php
+                            $rincian = $this->db->get_where('tbl_screening', ['no_id' => $d['nis']])->result_array();
+                            foreach ($rincian as $r) :
+                                echo "<ul><li>" . tgl2($r['date']) . "</li></ul>";
+                            endforeach;
                             ?>
                         </td>
                         <td class="table-action">
