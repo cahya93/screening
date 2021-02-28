@@ -1,9 +1,8 @@
-<body>
     <!--header section start -->
     <div class="header_section">
         <div class="container-fluid">
             <div class="main">
-                <div class="logo"><a href="index.html"><img src="<?= base_url(); ?>/assets/fronted/images/LOGO SATGAS.png" width="171px" height="43px"></a></div>
+                <div class="logo"><a href="<?= base_url(); ?>"><img src="<?= base_url(); ?>/assets/fronted/images/LOGO SATGAS.png" width="171px" height="43px"></a></div>
                 <div class="menu_text">
                     <ul>
                         <div class="togle_">
@@ -17,11 +16,11 @@
                         <div id="myNav" class="overlay">
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <div class="overlay-content">
-                                <a href="index.html">Home</a>
-                                <a href="protect.html">Protect</a>
-                                <a href="about.html">About</a>
-                                <a href="doctors.html">Doctors</a>
-                                <a href="news.html">News</a>
+                                <a href="<?= base_url(); ?>">Home</a>
+                                <a href="#">Protect</a>
+                                <a href="#">About</a>
+                                <a href="#">Doctors</a>
+                                <a href="#">News</a>
                                 <a href="<?= base_url('login'); ?>">Login</a>
                             </div>
                         </div>
@@ -32,4 +31,3 @@
                 </div>
             </div>
         </div>
-        <!-- banner section start -->

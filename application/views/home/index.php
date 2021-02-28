@@ -1,3 +1,4 @@
+<!-- banner section start -->
 <div class="banner_section layout_padding">
     <div class="container">
         <div id="my_slider" class="carousel slide" data-ride="carousel">
@@ -6,9 +7,10 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="container">
+                                <span> <?= $this->session->flashdata('message'); ?></span>
                                 <h1 class="banner_taital">Sudah melakukan screening hari ini?</h1>
                                 <p class="banner_text">Klik Menu dibawah untuk melakukan screening</p>
-                                <div class="more_bt"><a href="#">SCREENING</a></div>
+                                <div class="more_bt"><a href="#" data-toggle="modal" data-target="#myModal">SCREENING NOW!!!</a></div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -62,16 +64,26 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="protect_taital">How to Protect Yourself</h1>
-                <p class="protect_text">English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for</p>
+                <h1 class="protect_taital">Bagaimana Melindungi Diri Anda</h1>
+                <p class="protect_text">
+                    Cuci tangan dengan memakai sabun dan air mengalir secara rutin,
+                    Hindari menyentuh area wajah, apalagi mulut, hidung, dan mata,
+                    Gunakan tisu atau lipatan siku saat batuk,
+                    Hindari tempat ramai,
+                    Tetap di rumah ketika badan terasa sakit, meski hanya demam atau batuk ringan,
+                    Saat Anda mengalami gejala virus corona, seperti demam, batuk, dan kesulitan bernapas, segera hubungi layanan kesehatan dengan memakai telepon,
+                    Tetap perbarui informasi terkait covid dari sumber-sumber terpercaya.
+                </p>
             </div>
         </div>
         <div class="protect_section_2 layout_padding">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="hands_text"><a href="#">Wash your <br>hands frequently</a></h1>
-                    <h1 class="hands_text_2"><a href="#">Maintain social <br>distancing</a></h1>
-                    <h1 class="hands_text"><a href="#">Avoid touching eyes,<br>nose and mouth</a></h1>
+                    <h1 class="hands_text"><a href="#">Cuci
+                            Tangan Anda Sesering Mungkin</a></h1>
+                    <h1 class="hands_text_2"><a href="#">Selalu Jaga Jarak Minimal 1 Meter</a></h1>
+                    <h1 class="hands_text"><a href="#">Hindari Menyentuh Mata,
+                            Hidung dan Mulut Sebelum Cuci Tangan</a></h1>
                 </div>
                 <div class="col-md-6">
                     <div class="image_2"><img src="<?= base_url(); ?>/assets/fronted/images/img-2.png"></div>
@@ -183,3 +195,108 @@
     </div>
 </div>
 <!-- update section end -->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <form action="" method="post">
+                <div class="modal-header">
+                    <h2 style="text-align:center;font-weight:bold;">Form Screening Warga SMK Muhammadiyah Karangmojo</h2>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Nama Lengkap *</label>
+                        <input class="form-control" type="text" name="nama" id="nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Alamat domisili *</label>
+                        <input class="form-control" type="text" name="alamat" id="alamat" required>
+                    </div>
+                    <div class="form-group">
+                        <select class="nice-select" name="kategori" id="kategori" required>
+                            <option value="">Pilih Kategori</option>
+                            <?php foreach ($kategori as $k) : ?>
+                                <option value="<?= $k['id']; ?>"><?= $k['nama']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select name="kelas" id="kelas">
+                            <option value="">Pilih Kelas</option>
+                            <?php foreach ($kelas as $k) : ?>
+                                <option value="<?= $k['id']; ?>"><?= $k['kelas']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Apakah saat ini anda sedang memiliki penyakit bawaan atau comorbid yang tidak terkontrol? Jika Ya, sebutkan apa penyakitnya. (misal : asma, diabetes, jantung, dll)</label>
+                        <select name="p1" id="p1" required>
+                            <option value="">Silahkan Pilih</option>
+                            <option value="Ya. ">Ya</option>
+                            <option value="Tidak">Tidak</option>
+                        </select>
+                        <input class="form-control" type="text" name="p1_1" id="p1_1">
+                    </div>
+                    <div class="form-group">
+                        <label>Apakah dalam kurun waktu 14 hari terakhir anda mengalami sakit tertentu? Jika Ya, sebutkan apa sakitnya.</label>
+                        <select name="p2" id="p2" required>
+                            <option value="">Silahkan Pilih</option>
+                            <option value="Ya. ">Ya</option>
+                            <option value="Tidak">Tidak</option>
+                        </select>
+                        <input class="form-control" type="text" name="p2_1" id="p2_1">
+                    </div>
+                    <div class="form-group">
+                        <label>Apakah dalam kurun waktu 14 hari terakhir anda memiliki riwayat perjalanan dari daerah/kota dengan kategori zona Merah? Jika Ya, sebutkan riwayat perjalanannya dari kota mana saja.</label>
+                        <select name="p3" id="p3" required>
+                            <option value="">Silahkan Pilih</option>
+                            <option value="Ya. ">Ya</option>
+                            <option value="Tidak">Tidak</option>
+                        </select>
+                        <input class="form-control" type="text" name="p3_1" id="p3_1">
+                    </div>
+                    <div class="form-group">
+                        <label>Apakah dalam kurun waktu 14 hari terakhir anda atau keluarga anda memiliki riwayat kontak dengan orang yang terkonfirmasi positif covid-19?</label>
+                        <select name="p4" id="p4" required>
+                            <option value="">Silahkan Pilih</option>
+                            <option value="Ya">Ya</option>
+                            <option value="Tidak">Tidak</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Apakah ada anggota keluarga atau tetangga sekitar tempat tinggal yang terkonfirmasi positif covid-19?</label>
+                        <select name="p5" id="p5" required>
+                            <option value="">Silahkan Pilih</option>
+                            <option value="Ya">Ya</option>
+                            <option value="Tidak">Tidak</option>
+                        </select>
+                    </div>
+                    <div class="form-group" required>
+                        <label>Apakah anda memiliki akses transportasi yang memungkinkan penerapan jaga jarak?</label>
+                        <select name="p6" id="p6">
+                            <option value="">Silahkan Pilih</option>
+                            <option value="Ya">Ya</option>
+                            <option value="Tidak">Tidak</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Apakah anda bersedia untuk mematuhi dan melaksanakan segala bentuk pencegahan dengan protokol kesehatan covid-19 yang diterapkan di lingkungan SMK Muhammadiyah Karangmojo?</label>
+                        <select name="p7" id="p7" required>
+                            <option value="">Silahkan Pilih</option>
+                            <option value="Ya">Ya</option>
+                            <option value="Tidak">Tidak</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" style="float: left; margin-top:15px;">SIMPAN</button>
+                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
