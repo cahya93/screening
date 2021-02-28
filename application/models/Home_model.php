@@ -6,6 +6,7 @@ class Home_model extends CI_Model
     public function tbh_screening()
     {
         $data = [
+            'no_id' => $this->input->post('no_id', true),
             'nama' => $this->input->post('nama', true),
             'alamat' => $this->input->post('alamat', true),
             'kategori' => $this->input->post('kategori', true),

@@ -28,14 +28,38 @@ class Home extends CI_Controller
         }
     }
 
-    public function kartu()
+    public function dftr_scr()
     {
         $data['kategori'] = $this->db->get_where('tbl_kategori')->result_array();
         $data['data'] = $this->db->get_where('tbl_screening')->result_array();
 
         $this->load->view('home/wrapper/head.php');
         $this->load->view('home/wrapper/header.php', $data);
-        $this->load->view('home/kartu-screening.php', $data);
+        $this->load->view('home/daftar-screening.php', $data);
         $this->load->view('home/wrapper/footer.php', $data);
+    }
+
+    public function cetak_kartu($id)
+    {
+        $data['data'] = $this->db->get_where('tbl_screening', ['id' => $id])->row_array();
+        $this->load->view('home/cetak-kartu', $data);
+
+        $mpdf = new \Mpdf\Mpdf(
+            [
+                'mode' => 'utf-8',
+                'format' => 'A4',
+                'orientation' => 'P',
+                'setAutoTopMargin' => false
+            ]
+        );
+
+        // $mpdf->SetHTMLHeader('
+        // <div style="text-align: center; font-weight: bold;">
+        //   <img src="assets/img/pi-2020.png" width="100%" height="100%" />
+        // </div>');
+
+        $html = $this->load->view('home/cetak-kartu', [], true);
+        $mpdf->WriteHTML($html);
+        $mpdf->Output('kartu screening.pdf', \Mpdf\Output\Destination::INLINE);
     }
 }

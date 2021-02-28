@@ -76,15 +76,22 @@
                             <td scope="row"><?= $no; ?></td>
                             <td><?= tanggal($d['date']); ?></td>
                             <td><?= $d['nama']; ?></td>
-                            <td><?= $d['alamat']; ?></td>
+                            <td width="100px"><?= $d['alamat']; ?></td>
                             <td>
                                 <?php
                                 $kategori = $this->db->get_where('tbl_kategori', ['id' => $d['kategori']])->row_array();
                                 echo $kategori['nama'];
                                 ?>
                             </td>
-                            <td><?= $d['kelas']; ?></td>
-                            <td>Cetak</td>
+                            <td>
+                                <?php
+                                $kelas = $this->db->get_where('tbl_kelas', ['id' => $d['kelas']])->row_array();
+                                echo $kelas['kelas'];
+                                ?>
+                            </td>
+                            <td>
+                                <a href="<?= base_url('home/cetak_kartu/') . $d['id']; ?>"><button class="btn btn-primary">CETAK</button></a>
+                            </td>
                         </tr>
                         <?php $no++; ?>
                     <?php endforeach; ?>

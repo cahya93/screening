@@ -17,7 +17,7 @@
                             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                             <div class="overlay-content">
                                 <a href="<?= base_url(); ?>">Home</a>
-                                <a href="#">Protect</a>
+                                <a href="<?= base_url('home/dftr_scr'); ?>">Daftar Screening</a>
                                 <a href="#">About</a>
                                 <a href="#">Doctors</a>
                                 <a href="#">News</a>

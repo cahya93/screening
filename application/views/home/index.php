@@ -209,6 +209,10 @@
 
                 <div class="modal-body">
                     <div class="form-group">
+                        <label>Nomor Identitas *</label>
+                        <input class="form-control" type="number" name="no_id" id="no_id" placeholder="NIS / NBM / NIP /NIK" required>
+                    </div>
+                    <div class="form-group">
                         <label>Nama Lengkap *</label>
                         <input class="form-control" type="text" name="nama" id="nama" required>
                     </div>
