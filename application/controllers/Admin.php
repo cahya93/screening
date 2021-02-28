@@ -28,4 +28,17 @@ class Admin extends CI_Controller
         $this->load->view('admin/index.php', $data);
         $this->load->view('admin/wrapper/footer.php');
     }
+    public function dtl_kls()
+    {
+        $kelas = $this->input->get('kelas');
+        $data['title'] = "Detail Siswa";
+        $data['kelas'] = $kelas;
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['data'] = $this->db->get_where('tbl_siswa', ['kelas' => $kelas])->result_array();
+        $this->load->view('admin/wrapper/head.php');
+        $this->load->view('admin/wrapper/sidebar.php', $data);
+        $this->load->view('admin/wrapper/navbar.php', $data);
+        $this->load->view('admin/detail-kelas.php', $data);
+        $this->load->view('admin/wrapper/footer.php');
+    }
 }

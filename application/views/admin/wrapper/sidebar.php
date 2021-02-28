@@ -11,24 +11,24 @@
                 </li>
 
                 <li class="sidebar-item active">
-                    <a class="sidebar-link" href="index.html">
+                    <a class="sidebar-link" href="<?= base_url('admin'); ?>">
                         <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="pages-profile.html">
+                    <a class="sidebar-link" href="#">
                         <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="pages-settings.html">
+                    <a class="sidebar-link" href="#">
                         <i class="align-middle" data-feather="settings"></i> <span class="align-middle">Settings</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item">
+                <!-- <li class="sidebar-item">
                     <a data-target="#ui" data-toggle="collapse" class="sidebar-link collapsed">
                         <i class="align-middle" data-feather="briefcase"></i> <span class="align-middle">UI Elements</span>
                     </a>
@@ -41,7 +41,7 @@
                         <li class="sidebar-item"><a class="sidebar-link" href="ui-modals.html">Modals</a></li>
                         <li class="sidebar-item"><a class="sidebar-link" href="ui-typography.html">Typography</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <li class="sidebar-header">
                     Lainnya
                 </li>
