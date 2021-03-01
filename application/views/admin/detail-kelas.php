@@ -11,7 +11,8 @@
                     <th>Nama</th>
                     <th>Kelas</th>
                     <th>Status</th>
-                    <th>Rincian</th>
+                    <th>Tanggal Screening</th>
+                    <th>Status</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -29,9 +30,9 @@
                             $result = count($jml);
 
                             if ($result < 1) {
-                                echo "<span class='btn btn-danger'>$result Siswa</span>";
+                                echo "<span class='btn btn-danger'>$result Screening</span>";
                             } else {
-                                echo "<span class='btn btn-warning'>$result Siswa</span>";
+                                echo "<span class='btn btn-warning'>$result Screening</span>";
                             }
                             ?>
                         </td>
@@ -40,6 +41,25 @@
                             $rincian = $this->db->get_where('tbl_screening', ['no_id' => $d['nis']])->result_array();
                             foreach ($rincian as $r) :
                                 echo "<ul><li>" . tgl2($r['date']) . "</li></ul>";
+                            endforeach;
+                            ?>
+                        </td>
+                        <td>
+                            <?php
+                            $rincian = $this->db->get_where('tbl_screening', ['no_id' => $d['nis']])->result_array();
+                            foreach ($rincian as $r) :
+                                $result = $this->db->get_where('tbl_screening', ['no_id' => $d['nis'], 'date' => $r['date']])->row_array();
+                                $score = $result['p1'] + $result['p2'] + $result['p3'] + $result['p4'] + $result['p5'] + $result['p6'] + $result['p7'];
+                                // echo $score;
+                                if ($score <= 60) {
+                                    echo "<span class='btn btn-danger'>$score</span>";
+                                } else if ($score < 75) {
+                                    echo "<span class='btn btn-warning'>$score</span>";
+                                } else if ($score >= 75) {
+                                    echo "<span class='btn btn-success'>$score</span>";
+                                } else if ($score > "") {
+                                    echo "<span class='btn btn-danger'>$score</span>";
+                                }
                             endforeach;
                             ?>
                         </td>
