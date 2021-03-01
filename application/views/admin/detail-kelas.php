@@ -52,11 +52,11 @@
                                 $score = $result['p1'] + $result['p2'] + $result['p3'] + $result['p4'] + $result['p5'] + $result['p6'] + $result['p7'];
                                 // echo $score;
                                 if ($score <= 60) {
-                                    echo "<span class='btn btn-danger'>$score / Berbahaya</span>";
+                                    echo "<ul><li><span class='btn btn-danger'>$score / Berbahaya</li></ul></span>";
                                 } else if ($score < 75) {
-                                    echo "<span class='btn btn-warning'>$score / Waspada</span>";
+                                    echo "<ul><li><span class='btn btn-warning'>$score / Waspada</li></ul></span>";
                                 } else if ($score >= 75) {
-                                    echo "<span class='btn btn-success'>$score / Aman</span>";
+                                    echo "<ul><li><span class='btn btn-success'>$score / Aman</li></ul></span>";
                                 }
                             endforeach;
                             ?>
