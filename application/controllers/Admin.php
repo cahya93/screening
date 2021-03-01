@@ -41,4 +41,49 @@ class Admin extends CI_Controller
         $this->load->view('admin/detail-kelas.php', $data);
         $this->load->view('admin/wrapper/footer.php');
     }
+    public function rekap_siswa()
+    {
+        $data['title'] = "Rekap Siswa";
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['kelas'] = $this->db->get_where('tbl_kelas')->result_array();
+        $kls = $this->input->get('kelas');
+        $date = $this->input->get('date');
+        $data['kls'] = $kls;
+        $data['date'] = $date;
+        $data['data'] = $this->db->get_where('tbl_siswa', ['kelas' => $kls])->result_array();
+
+        $this->load->view('admin/wrapper/head.php');
+        $this->load->view('admin/wrapper/sidebar.php', $data);
+        $this->load->view('admin/wrapper/navbar.php', $data);
+        $this->load->view('admin/rekap-siswa.php', $data);
+        $this->load->view('admin/wrapper/footer.php');
+    }
+
+    public function ctk_siswa()
+    {
+        $kls = $this->input->get('kelas');
+        $date = $this->input->get('date');
+        $data['kls'] = $kls;
+        $data['date'] = $date;
+        $data['data'] = $this->db->get_where('tbl_siswa', ['kelas' => $kls])->result_array();
+        $this->load->view('admin/pdf-siswa', $data);
+
+        $mpdf = new \Mpdf\Mpdf(
+            [
+                'mode' => 'utf-8',
+                'format' => 'A4',
+                'orientation' => 'P',
+                'setAutoTopMargin' => false
+            ]
+        );
+
+        // $mpdf->SetHTMLHeader('
+        // <div style="text-align: center; font-weight: bold;">
+        //   <img src="assets/img/pi-2020.png" width="100%" height="100%" />
+        // </div>');
+
+        $html = $this->load->view('admin/pdf-siswa', [], true);
+        $mpdf->WriteHTML($html);
+        $mpdf->Output('kartu screening.pdf', \Mpdf\Output\Destination::INLINE);
+    }
 }
