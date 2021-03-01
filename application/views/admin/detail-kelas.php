@@ -12,7 +12,7 @@
                     <th>Kelas</th>
                     <th>Status</th>
                     <th>Tanggal Screening</th>
-                    <th>Status</th>
+                    <th>Score / Status</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -52,13 +52,11 @@
                                 $score = $result['p1'] + $result['p2'] + $result['p3'] + $result['p4'] + $result['p5'] + $result['p6'] + $result['p7'];
                                 // echo $score;
                                 if ($score <= 60) {
-                                    echo "<span class='btn btn-danger'>$score</span>";
+                                    echo "<span class='btn btn-danger'>$score / Berbahaya</span>";
                                 } else if ($score < 75) {
-                                    echo "<span class='btn btn-warning'>$score</span>";
+                                    echo "<span class='btn btn-warning'>$score / Waspada</span>";
                                 } else if ($score >= 75) {
-                                    echo "<span class='btn btn-success'>$score</span>";
-                                } else if ($score > "") {
-                                    echo "<span class='btn btn-danger'>$score</span>";
+                                    echo "<span class='btn btn-success'>$score / Aman</span>";
                                 }
                             endforeach;
                             ?>
