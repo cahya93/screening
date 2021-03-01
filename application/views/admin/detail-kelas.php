@@ -8,7 +8,7 @@
                 <tr>
                     <th>No</th>
                     <th>NIS</th>
-                    <th>Nama</th>
+                    <th width="150px">Nama</th>
                     <th>Kelas</th>
                     <th>Status</th>
                     <th>Tanggal Screening</th>
@@ -22,7 +22,7 @@
                     <tr>
                         <td><?= $no; ?></td>
                         <td><?= $d['nis']; ?></td>
-                        <td><?= $d['nama']; ?></td>
+                        <td width="150px"><?= $d['nama']; ?></td>
                         <td><?= $d['kelas']; ?></td>
                         <td>
                             <?php
