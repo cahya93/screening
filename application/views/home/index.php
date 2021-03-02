@@ -259,7 +259,7 @@
                         <select name="p3" id="p3" required>
                             <option value="">Silahkan Pilih</option>
                             <option value="Ya. ">Ya</option>
-                            <option value="15">Tidak</option>
+                            <option value="10">Tidak</option>
                         </select>
                         <input class="form-control" type="text" name="p3_1" id="p3_1">
                     </div>
