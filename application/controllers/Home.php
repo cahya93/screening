@@ -23,7 +23,7 @@ class Home extends CI_Controller
             $this->load->view('home/wrapper/footer.php', $data);
         } else {
             $this->Home->tbh_screening();
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Screening berhasil ditambahkan!!!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Screening berhasil ditambahkan!!!</br>JIKA ANDA JUJUR MENGISI INSTRUMEN INI, ANDA DINYATAKAN SEHAT, IN SYAA ALLAH.</div>');
             redirect('home');
         }
     }

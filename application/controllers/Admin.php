@@ -28,6 +28,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/index.php', $data);
         $this->load->view('admin/wrapper/footer.php');
     }
+
     public function dtl_kls()
     {
         $kelas = $this->input->get('kelas');
@@ -41,6 +42,7 @@ class Admin extends CI_Controller
         $this->load->view('admin/detail-kelas.php', $data);
         $this->load->view('admin/wrapper/footer.php');
     }
+
     public function rekap_siswa()
     {
         $data['title'] = "Rekap Siswa";
@@ -85,5 +87,19 @@ class Admin extends CI_Controller
         $html = $this->load->view('admin/pdf-siswa', [], true);
         $mpdf->WriteHTML($html);
         $mpdf->Output('kartu screening.pdf', \Mpdf\Output\Destination::INLINE);
+    }
+
+    public function dtl_siswa()
+    {
+        $data['title'] = "Detail Siswa";
+        $nis = $this->input->get('nis');
+        $date = $this->input->get('date');
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['data'] = $this->db->get_where('tbl_screening', ['no_id' => $nis, 'date' => $date])->row_array();
+        $this->load->view('admin/wrapper/head.php');
+        $this->load->view('admin/wrapper/sidebar.php', $data);
+        $this->load->view('admin/wrapper/navbar.php', $data);
+        $this->load->view('admin/detail-siswa.php', $data);
+        $this->load->view('admin/wrapper/footer.php');
     }
 }

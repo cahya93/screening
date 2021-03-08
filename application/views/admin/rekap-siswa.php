@@ -83,7 +83,7 @@
                             ?>
                         </td>
                         <td class="table-action">
-                            <a href="#"><i class="align-middle" data-feather="edit-2"></i></a>
+                            <a href="<?= base_url('Admin/dtl_siswa?nis=') . $d['nis'] . "&date=" . $date; ?>"><i class="align-middle" data-feather="edit-2"></i></a>
                             <a href="#"><i class="align-middle" data-feather="trash"></i></a>
                         </td>
                     </tr>
