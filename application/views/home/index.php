@@ -10,7 +10,7 @@
                                 <span> <?= $this->session->flashdata('message'); ?></span>
                                 <h1 class="banner_taital">Sudah melakukan screening hari ini?</h1>
                                 <p class="banner_text">Klik Menu dibawah untuk melakukan screening</p>
-                                <div class="more_bt"><a href="#" data-toggle="modal" data-target="#myModal">SCREENING NOW!!!</a></div>
+                                <div class="more_bt"><a href="#" data-toggle="modal" data-target="#myModal">SCREENING SEKARANG!!!</a></div>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -241,7 +241,7 @@
                         <select name="p1" id="p1" required>
                             <option value="">Silahkan Pilih</option>
                             <option value="Ya. ">Ya</option>
-                            <option value="15">Tidak</option>
+                            <option value="5">Tidak</option>
                         </select>
                         <input class="form-control" type="text" name="p1_1" id="p1_1">
                     </div>
@@ -250,7 +250,7 @@
                         <select name="p2" id="p2" required>
                             <option value="">Silahkan Pilih</option>
                             <option value="Ya. ">Ya</option>
-                            <option value="15">Tidak</option>
+                            <option value="5">Tidak</option>
                         </select>
                         <input class="form-control" type="text" name="p2_1" id="p2_1">
                     </div>
@@ -259,7 +259,7 @@
                         <select name="p3" id="p3" required>
                             <option value="">Silahkan Pilih</option>
                             <option value="Ya. ">Ya</option>
-                            <option value="10">Tidak</option>
+                            <option value="25">Tidak</option>
                         </select>
                         <input class="form-control" type="text" name="p3_1" id="p3_1">
                     </div>
@@ -268,7 +268,7 @@
                         <select name="p4" id="p4" required>
                             <option value="">Silahkan Pilih</option>
                             <option value="Ya">Ya</option>
-                            <option value="20">Tidak</option>
+                            <option value="25">Tidak</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -276,7 +276,7 @@
                         <select name="p5" id="p5" required>
                             <option value="">Silahkan Pilih</option>
                             <option value="Ya">Ya</option>
-                            <option value="20">Tidak</option>
+                            <option value="25">Tidak</option>
                         </select>
                     </div>
                     <div class="form-group" required>
@@ -291,7 +291,7 @@
                         <label>Apakah anda bersedia untuk mematuhi dan melaksanakan segala bentuk pencegahan dengan protokol kesehatan covid-19 yang diterapkan di lingkungan SMK Muhammadiyah Karangmojo?</label>
                         <select name="p7" id="p7" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="10">Ya</option>
+                            <option value="5">Ya</option>
                             <option value="Tidak">Tidak</option>
                         </select>
                     </div>
