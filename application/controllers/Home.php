@@ -14,6 +14,8 @@ class Home extends CI_Controller
     {
         $data['kategori'] = $this->db->get_where('tbl_kategori')->result_array();
         $data['kelas'] = $this->db->get_where('tbl_kelas')->result_array();
+        $data['coba'] = 30;
+        $data['coba'] = $this->input->post('nama');
 
         $this->form_validation->set_rules('nama', 'Nama', 'required|trim');
         if ($this->form_validation->run() == false) {
@@ -22,8 +24,9 @@ class Home extends CI_Controller
             $this->load->view('home/index.php', $data);
             $this->load->view('home/wrapper/footer.php', $data);
         } else {
+            $data['coba'] = $this->input->post('nama');
             $this->Home->tbh_screening();
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Screening Anda berhasil dianalisa dengan nilai ....!!!</br>ANDA DINYATAKAN SEHAT, IN SYAA ALLAH. JIKA ANDA JUJUR MENGISI INSTRUMEN INI</div>');
+            $this->session->set_flashdata('message', ' <div class="alert alert-success" role="alert">Screening Anda berhasil dianalisa!!!</br>Untuk melihat hasil screening Anda silahkan <a href="home/dftr_scr"><b style:"color:blue;">KLIK SINI</b></a></div>');
             redirect('home');
         }
     }
@@ -57,9 +60,19 @@ class Home extends CI_Controller
         // <div style="text-align: center; font-weight: bold;">
         //   <img src="assets/img/pi-2020.png" width="100%" height="100%" />
         // </div>');
+        $mpdf->SetHTMLFooter('
+        <div style="text-align: center; font-weight: bold;">
+        <p>Tunjukan kartu ini saat Anda datang kesekolah, jika Anda dinyakan aman masuk sekolah.</p>
+        </div>');
 
         $html = $this->load->view('home/cetak-kartu', [], true);
         $mpdf->WriteHTML($html);
         $mpdf->Output('kartu screening.pdf', \Mpdf\Output\Destination::INLINE);
+    }
+
+    public function rekap()
+    {
+        $data['coba'] = $this->input->post('nama');
+        $this->load->view('home/rekap', $data);
     }
 }

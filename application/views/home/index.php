@@ -304,3 +304,4 @@
         </div>
     </div>
 </div>
+<a href="https://wa.me/685729598484?text=Assamu'alaikum,%20saya%20butuh%20informasi%20mengenai%20hasil%20screening%20Saya..."></a>
