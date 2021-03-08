@@ -231,8 +231,5 @@
         ?>
     </p>
 </body>
-<footer>
-    <p>Tunjukan kartu ini saat Anda datang kesekolah, jika Anda dinyakan aman masuk sekolah.</p>
-</footer>
 
 </html>

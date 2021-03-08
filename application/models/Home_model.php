@@ -3,6 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home_model extends CI_Model
 {
+    public function getDataSCR()
+    {
+        $this->db->order_by('id', 'DESC');
+        return $this->db->get_where('tbl_screening')->result_array();
+    }
+
     public function tbh_screening()
     {
         $data = [

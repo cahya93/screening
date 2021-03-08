@@ -14,8 +14,6 @@ class Home extends CI_Controller
     {
         $data['kategori'] = $this->db->get_where('tbl_kategori')->result_array();
         $data['kelas'] = $this->db->get_where('tbl_kelas')->result_array();
-        $data['coba'] = 30;
-        $data['coba'] = $this->input->post('nama');
 
         $this->form_validation->set_rules('nama', 'Nama', 'required|trim');
         if ($this->form_validation->run() == false) {
@@ -24,7 +22,6 @@ class Home extends CI_Controller
             $this->load->view('home/index.php', $data);
             $this->load->view('home/wrapper/footer.php', $data);
         } else {
-            $data['coba'] = $this->input->post('nama');
             $this->Home->tbh_screening();
             $this->session->set_flashdata('message', ' <div class="alert alert-success" role="alert">Screening Anda berhasil dianalisa!!!</br>Untuk melihat hasil screening Anda silahkan <a href="home/dftr_scr"><b style:"color:blue;">KLIK SINI</b></a></div>');
             redirect('home');
@@ -34,7 +31,7 @@ class Home extends CI_Controller
     public function dftr_scr()
     {
         $data['kategori'] = $this->db->get_where('tbl_kategori')->result_array();
-        $data['data'] = $this->db->get_where('tbl_screening')->result_array();
+        $data['data'] = $this->Home->getDataSCR();
 
         $this->load->view('home/wrapper/head.php');
         $this->load->view('home/wrapper/header.php', $data);
