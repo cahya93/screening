@@ -52,7 +52,7 @@ $kelas = $this->db->get_where('tbl_kelas', ['id' => $data['kelas']])->row_array(
                     <p>Jawaban:
                         <?php
                         $p1 = $data['p1'];
-                        if ($p1 == 15) {
+                        if ($p1 == 5) {
                             echo "<span class='btn btn-success'>Tidak</span>";
                         } else {
                             echo "<span class='btn btn-warning'>$p1</span>";
@@ -64,7 +64,7 @@ $kelas = $this->db->get_where('tbl_kelas', ['id' => $data['kelas']])->row_array(
                     <p>Jawaban:
                         <?php
                         $p2 = $data['p2'];
-                        if ($data['p2'] == 15) {
+                        if ($data['p2'] == 5) {
                             echo "<span class='btn btn-success'>Tidak</span>";
                         } else {
                             echo "<span class='btn btn-warning'>$p2</span>";
@@ -76,7 +76,7 @@ $kelas = $this->db->get_where('tbl_kelas', ['id' => $data['kelas']])->row_array(
                     <p>Jawaban:
                         <?php
                         $p3 = $data['p3'];
-                        if ($data['p3'] == 10) {
+                        if ($data['p3'] == 25) {
                             echo "<span class='btn btn-success'>Tidak</span>";
                         } else {
                             echo "<span class='btn btn-warning'>$p3</span>";
@@ -88,7 +88,7 @@ $kelas = $this->db->get_where('tbl_kelas', ['id' => $data['kelas']])->row_array(
                     <p>Jawaban:
                         <?php
                         $p4 = $data['p4'];
-                        if ($data['p4'] == 20) {
+                        if ($data['p4'] == 25) {
                             echo "<span class='btn btn-success'>Tidak</span>";
                         } else {
                             echo "<span class='btn btn-warning'>$p4</span>";
@@ -100,7 +100,7 @@ $kelas = $this->db->get_where('tbl_kelas', ['id' => $data['kelas']])->row_array(
                     <p>Jawaban:
                         <?php
                         $p5 = $data['p5'];
-                        if ($p5 == 20) {
+                        if ($p5 == 25) {
                             echo "<span class='btn btn-success'>Tidak</span>";
                         } else {
                             echo "<span class='btn btn-warning'>$p5</span>";
@@ -124,7 +124,7 @@ $kelas = $this->db->get_where('tbl_kelas', ['id' => $data['kelas']])->row_array(
                     <p>Jawaban:
                         <?php
                         $p7 = $data['p7'];
-                        if ($p7 == 10) {
+                        if ($p7 == 5) {
                             echo "<span class='btn btn-success'>Ya</span>";
                         } else {
                             echo "<span class='btn btn-warning'>$p7</span>";
