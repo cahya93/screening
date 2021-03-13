@@ -229,7 +229,10 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <select name="kelas" id="kelas">
+                        <label><small><i>*Kelas diisi ketika memilih kategori siswa</i></small></label>
+                    </div>
+                    <div class="form-group">
+                        <select class="from-control" name="kelas" id="kelas">
                             <option value="">Pilih Kelas</option>
                             <?php foreach ($kelas as $k) : ?>
                                 <option value="<?= $k['id']; ?>"><?= $k['kelas']; ?></option>
