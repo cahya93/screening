@@ -23,7 +23,8 @@ class Home_model extends CI_Model
             'p4' => $this->input->post('p4'),
             'p5' => $this->input->post('p5'),
             'p6' => $this->input->post('p6'),
-            'p7' => $this->input->post('p7')
+            'p7' => $this->input->post('p7'),
+            'status' => $this->input->post('status')
         ];
         $this->db->insert('tbl_screening', $data);
     }
