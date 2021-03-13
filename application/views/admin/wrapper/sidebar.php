@@ -29,6 +29,9 @@
                     <ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                         <li class="sidebar-item"><a class="sidebar-link" href="<?= base_url('admin/rekap_siswa'); ?>">Rekap Siswa</a></li>
                     </ul>
+                    <ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                        <li class="sidebar-item"><a class="sidebar-link" href="<?= base_url('admin/rekap_ktgr'); ?>">Rekap Kategori</a></li>
+                    </ul>
                 </li>
                 <li class="sidebar-header">
                     Lainnya

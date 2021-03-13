@@ -102,4 +102,35 @@ class Admin extends CI_Controller
         $this->load->view('admin/detail-siswa.php', $data);
         $this->load->view('admin/wrapper/footer.php');
     }
+
+    public function rekap_ktgr()
+    {
+        $data['title'] = "Rekap Kategori";
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['kategori'] = $this->db->get_where('tbl_kategori')->result_array();
+        $kategori = $this->input->get('kategori');
+        $date = $this->input->get('date');
+        $data['ktgr'] = $kategori;
+        $data['date'] = $date;
+        $data['data'] = $this->db->get_where('tbl_screening', ['kategori' => $kategori, 'date' => $date])->result_array();
+
+        $this->load->view('admin/wrapper/head.php');
+        $this->load->view('admin/wrapper/sidebar.php', $data);
+        $this->load->view('admin/wrapper/navbar.php', $data);
+        $this->load->view('admin/rekap-kategori.php', $data);
+        $this->load->view('admin/wrapper/footer.php');
+    }
+    public function dtl_ktgr()
+    {
+        $data['title'] = "Detail Kategori";
+        $id = $this->input->get('id');
+        $date = $this->input->get('date');
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['data'] = $this->db->get_where('tbl_screening', ['id' => $id, 'date' => $date])->row_array();
+        $this->load->view('admin/wrapper/head.php');
+        $this->load->view('admin/wrapper/sidebar.php', $data);
+        $this->load->view('admin/wrapper/navbar.php', $data);
+        $this->load->view('admin/detail-kategori.php', $data);
+        $this->load->view('admin/wrapper/footer.php');
+    }
 }
