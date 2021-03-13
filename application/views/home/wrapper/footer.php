@@ -17,7 +17,7 @@
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <h2 class="useful_text">About</h2>
-                        <p class="footer_text">Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various</p>
+                        <p class="footer_text">Aplikasi ini dibuat dalam rangka pencegahan COVID-19 dilingkungan SMK Muhammadiyah. Oleh TIM Satgas COVID Muhka.</p>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <h2 class="useful_text">Contact Us</h2>
@@ -25,22 +25,23 @@
                             <ul>
                                 <li>
                                     <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <span class="padding_15">Location</span></a>
+                                        <span class="padding_15">SMK Muh Karangmojo</span></a>
                                 </li>
                                 <li>
                                     <a href="#"><i class="fa fa-phone" aria-hidden="true"></i>
-                                        <span class="padding_15">Call +01 1234567890</span></a>
+                                        <span class="padding_15">(0274) 391939</span></a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>
-                                        <span class="padding_15">demo@gmail.com</span></a>
-                                </li>
+                                        <span class="padding_15">official@smkmuhkarangmojo.sch.id</span></a>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6">
-                        <h2 class="useful_text">countrys</h2>
-                        <div class="map_image"><img src="<?= base_url(); ?>/assets/fronted/images/map-bg.png"></div>
+                        <h2 class="useful_text">MAPS</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7902.880108217903!2d110.68094099999999!3d-7.953393799999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7bb530e9c31da7%3A0x2c12be3b566e2d00!2sSMK%20Muhammadiyah%20Karangmojo!5e0!3m2!1sid!2sid!4v1615642111125!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <!-- <div class="map_image"><img src="<?= base_url(); ?>/assets/fronted/images/map-bg.png"></div> -->
                     </div>
                 </div>
             </div>

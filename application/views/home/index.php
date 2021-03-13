@@ -101,16 +101,16 @@
                 <div class="about_img"><img src="<?= base_url(); ?>/assets/fronted/images/img-1.png"></div>
             </div>
             <div class="col-md-6">
-                <h1 class="about_taital">Coronavirus what it is?</span></h1>
-                <p class="about_text">when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>
-                <div class="read_bt"><a href="#">Read More</a></div>
+                <h1 class="about_taital">Apa itu virus Corona?</span></h1>
+                <p class="about_text">Coronavirus merupakan keluarga besar virus yang menyebabkan penyakit pada manusia dan hewan. Pada manusia biasanya menyebabkan penyakit infeksi saluran pernapasan, mulai flu biasa hingga penyakit yang serius seperti Middle East Respiratory Syndrome (MERS) dan Sindrom Pernafasan Akut Berat/ Severe Acute Respiratory Syndrome (SARS). Coronavirus jenis baru yang ditemukan pada manusia sejak kejadian luar biasa muncul di Wuhan Cina, pada Desember 2019, kemudian diberi nama Severe Acute Respiratory Syndrome Coronavirus 2 (SARS-COV2), dan menyebabkan penyakit Coronavirus Disease-2019 (COVID-19)</p>
+                <div class="read_bt"><a href="https://stoppneumonia.id/informasi-tentang-virus-corona-novel-coronavirus/">Read More</a></div>
             </div>
         </div>
     </div>
 </div>
 <!-- about section end -->
 <!-- doctor section start -->
-<div class="doctors_section layout_padding">
+<!-- <div class="doctors_section layout_padding">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -127,7 +127,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- doctor section end -->
 <!-- news section start -->
 <div class="news_section layout_padding">
