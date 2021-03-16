@@ -57,13 +57,13 @@
                         <td>
                             <?php
                             $rincian = $this->db->get_where('tbl_screening', ['no_id' => $d['nis'], 'date' => $date])->row_array();
-                            $score = $rincian['p1'] + $rincian['p2'] + $rincian['p3'] + $rincian['p4'] + $rincian['p5'] + $rincian['p6'] + $rincian['p7'];
+                            $score = $rincian['p1'] + $rincian['p2'] + $rincian['p3'] + $rincian['p4'] + $rincian['p5'] + $rincian['p6'] + $rincian['p7'] + $rincian['p8'] + $rincian['p9'] + $rincian['p10'];
                             // echo $score;
-                            if ($score <= 60) {
+                            if ($score <= 69) {
                                 echo "<span class='btn btn-danger'>$score</span>";
-                            } else if ($score < 75) {
+                            } else if ($score < 89) {
                                 echo "<span class='btn btn-warning'>$score</span>";
-                            } else if ($score >= 75) {
+                            } else if ($score >= 90) {
                                 echo "<span class='btn btn-success'>$score</span>";
                             }
                             ?>
@@ -71,7 +71,7 @@
                         <td>
                             <?php
                             $rincian = $this->db->get_where('tbl_screening', ['no_id' => $d['nis'], 'date' => $date])->row_array();
-                            $score = $rincian['p1'] + $rincian['p2'] + $rincian['p3'] + $rincian['p4'] + $rincian['p5'] + $rincian['p6'] + $rincian['p7'];
+                            $score = $rincian['p1'] + $rincian['p2'] + $rincian['p3'] + $rincian['p4'] + $rincian['p5'] + $rincian['p6'] + $rincian['p7'] + $rincian['p8'] + $rincian['p9'] + $rincian['p10'];
                             // echo $score;
                             if ($score <= 60) {
                                 echo "<span class='btn btn-danger'>Stop</span>";
