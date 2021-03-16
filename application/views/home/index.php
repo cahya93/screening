@@ -253,7 +253,7 @@
                         <label>2. Saya sedang demam dengan suhu badan diatas 37,3 derajat Celcius</label>
                         <select name="p2" id="p2" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="0">Ya</option>
+                            <option value="Ya">Ya</option>
                             <option value="10">Tidak</option>
                         </select>
                     </div>
@@ -261,7 +261,7 @@
                         <label>3. Saya sedang batuk</label>
                         <select name="p3" id="p3" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="0">Ya</option>
+                            <option value="Ya">Ya</option>
                             <option value="10">Tidak</option>
                         </select>
                     </div>
@@ -269,7 +269,7 @@
                         <label>4. Saya sedang sakit tenggorokan / nyeri saat menelan</label>
                         <select name="p4" id="p4" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="0">Ya</option>
+                            <option value="Ya">Ya</option>
                             <option value="10">Tidak</option>
                         </select>
                     </div>
@@ -277,7 +277,7 @@
                         <label>5. Saya sedang sesak napas / kesulitan berbicara</label>
                         <select name="p5" id="p5" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="0">Ya</option>
+                            <option value="Ya">Ya</option>
                             <option value="10">Tidak</option>
                         </select>
                     </div>
@@ -285,7 +285,7 @@
                         <label>6. Saya sedang mengalami masalah pada indera penciuman/perasa</label>
                         <select name="p6" id="p6">
                             <option value="">Silahkan Pilih</option>
-                            <option value="0">Ya</option>
+                            <option value="Ya">Ya</option>
                             <option value="10">Tidak</option>
                         </select>
                     </div>
@@ -293,7 +293,7 @@
                         <label>7.	Dalam kurun waktu 14 hari terakhir saya mengalami sakit tertentu (seperti demam/batuk/sakit tenggorokan/sesak napas/dll)/batuk/sakit tenggorokan/sesak napas/dll)</label>
                         <select name="p7" id="p7" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="0">Ya</option>
+                            <option value="Ya">Ya</option>
                             <option value="10">Tidak</option>
                         </select>
                     </div>
@@ -301,7 +301,7 @@
                         <label>8. Dalam kurun waktu 14 hari terakhir saya melakukan perjalanan ke luar kota/daerah dengan kategori zona merah</label>
                         <select name="p8" id="p8" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="0">Ya</option>
+                            <option value="Ya">Ya</option>
                             <option value="10">Tidak</option>
                         </select>
                         <label for="">Jika Ya, kota/daerah yang saya kunjungi</label>
@@ -311,7 +311,7 @@
                         <label>9. Dalam kurun waktu 14 hari terakhir, saya terdapat riwayat kontak (seperti bersentuhan/jabat tangan, mengobrol lama atau dalam satu ruangan) dengan orang yang sudah terkonfirmasi positif terinfeksi virus covid-19</label>
                         <select name="p9" id="p9" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="0">Ya</option>
+                            <option value="Ya">Ya</option>
                             <option value="15">Tidak</option>
                         </select>
                     </div>
@@ -320,7 +320,7 @@
                         <select name="p10" id="p10" required>
                             <option value="">Silahkan Pilih</option>
                             <option value="10">Ya</option>
-                            <option value="0">Tidak</option>
+                            <option value="Tidak">Tidak</option>
                         </select>
                     </div>
                 </div>
