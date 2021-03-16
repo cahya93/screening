@@ -27,7 +27,7 @@ $kelas = $this->db->get_where('tbl_kelas', ['id' => $data['kelas']])->row_array(
                             <?php
                             $score = $data['p1'] + $data['p2'] + $data['p3'] + $data['p4'] + $data['p5'] + $data['p6'] + $data['p7'] + $data['p8'] + $data['p9'] + $data['p10'];
                             // echo $score;
-                            if ($score <= 60) {
+                            if ($score <= 79) {
                                 echo "<span class='btn btn-danger'>$score</span>";
                             } else if ($score < 89) {
                                 echo "<span class='btn btn-warning'>$score</span>";

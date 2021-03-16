@@ -49,13 +49,13 @@
                             $rincian = $this->db->get_where('tbl_screening', ['no_id' => $d['nis']])->result_array();
                             foreach ($rincian as $r) :
                                 $result = $this->db->get_where('tbl_screening', ['no_id' => $d['nis'], 'date' => $r['date']])->row_array();
-                                $score = $result['p1'] + $result['p2'] + $result['p3'] + $result['p4'] + $result['p5'] + $result['p6'] + $result['p7'];
+                                $score = $result['p1'] + $result['p2'] + $result['p3'] + $result['p4'] + $result['p5'] + $result['p6'] + $result['p7'] + $result['p8'] + $result['p9'] + $result['p10'];
                                 // echo $score;
-                                if ($score <= 60) {
+                                if ($score <= 79) {
                                     echo "<ul><li><span class='btn btn-danger'>$score / Berbahaya</li></ul></span>";
-                                } else if ($score < 75) {
+                                } else if ($score < 89) {
                                     echo "<ul><li><span class='btn btn-warning'>$score / Waspada</li></ul></span>";
-                                } else if ($score >= 75) {
+                                } else if ($score >= 90) {
                                     echo "<ul><li><span class='btn btn-success'>$score / Aman</li></ul></span>";
                                 }
                             endforeach;

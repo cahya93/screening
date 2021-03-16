@@ -30,13 +30,13 @@ $kelas = $this->db->get_where('tbl_kelas', ['id' => $data['kelas']])->row_array(
                         <th>:</th>
                         <th>
                             <?php
-                            $score = $data['p1'] + $data['p2'] + $data['p3'] + $data['p4'] + $data['p5'] + $data['p6'] + $data['p7'];
+                            $score = $data['p1'] + $data['p2'] + $data['p3'] + $data['p4'] + $data['p5'] + $data['p6'] + $data['p7'] + $data['p8'] + $data['p9'] + $data['p10'];
                             // echo $score;
-                            if ($score <= 60) {
+                            if ($score <= 70) {
                                 echo "<span class='btn btn-danger'>$score</span>";
-                            } else if ($score < 75) {
+                            } else if ($score < 89) {
                                 echo "<span class='btn btn-warning'>$score</span>";
-                            } else if ($score >= 75) {
+                            } else if ($score >= 90) {
                                 echo "<span class='btn btn-success'>$score</span>";
                             }
                             ?>
@@ -47,88 +47,125 @@ $kelas = $this->db->get_where('tbl_kelas', ['id' => $data['kelas']])->row_array(
                 <h3 style="margin-top: 25px;">Rincian Jawaban:</h3>
                 <ol>
                     <li>
-                        Apakah saat ini anda sedang memiliki penyakit bawaan atau comorbid yang tidak terkontrol? Jika Ya, sebutkan apa penyakitnya. (misal : asma, diabetes, jantung, dll)
+                        Saya memiliki penyakit bawaan atau comorbid yang tidak terkontrol (seperti asma, diabetes, jantung, dll)
                     </li>
-                    <p>Jawaban:
-                        <?php
-                        $p1 = $data['p1'];
-                        if ($p1 == 5) {
-                            echo "<span class='btn btn-success'>Tidak</span>";
-                        } else {
-                            echo "<span class='btn btn-warning'>$p1</span>";
-                        } ?>
+                    <p>
+                        Jawaban: <?php
+                                    $p1 = $data['p1'];
+                                    if ($p1 == 5) {
+                                        echo "<span class='btn btn-success'>Tidak</span>";
+                                    } else {
+                                        echo "<span class='btn btn-danger'>$p1</span>";
+                                    } ?>
+
                     </p>
                     <li>
-                        Apakah dalam kurun waktu 14 hari terakhir anda mengalami sakit tertentu? Jika Ya, sebutkan apa sakitnya.
+                        Saya sedang demam dengan suhu badan diatas 37,3 derajat Celcius
                     </li>
-                    <p>Jawaban:
-                        <?php
-                        $p2 = $data['p2'];
-                        if ($data['p2'] == 5) {
-                            echo "<span class='btn btn-success'>Tidak</span>";
-                        } else {
-                            echo "<span class='btn btn-warning'>$p2</span>";
-                        } ?>
+                    <p>
+                        Jawaban: <?php
+                                    $p1 = $data['p2'];
+                                    if ($p1 == 10) {
+                                        echo "<span class='btn btn-success'>Tidak</span>";
+                                    } else {
+                                        echo "<span class='btn btn-danger'>$p1</span>";
+                                    } ?>
                     </p>
                     <li>
-                        Apakah dalam kurun waktu 14 hari terakhir anda memiliki riwayat perjalanan dari daerah/kota dengan kategori zona Merah? Jika Ya, sebutkan riwayat perjalanannya dari kota mana saja
+                        Saya sedang batuk
                     </li>
-                    <p>Jawaban:
-                        <?php
-                        $p3 = $data['p3'];
-                        if ($data['p3'] == 25) {
-                            echo "<span class='btn btn-success'>Tidak</span>";
-                        } else {
-                            echo "<span class='btn btn-warning'>$p3</span>";
-                        } ?>
+                    <p>
+                        Jawaban: <?php
+                                    $p3 = $data['p3'];
+                                    if ($data['p3'] == 10) {
+                                        echo "<span class='btn btn-success'>Tidak</span>";
+                                    } else {
+                                        echo "<span class='btn btn-danger'>$p3</span>";
+                                    } ?>
                     </p>
                     <li>
-                        Apakah dalam kurun waktu 14 hari terakhir anda atau keluarga anda memiliki riwayat kontak dengan orang yang terkonfirmasi positif covid-19?
+                        Saya sedang sakit tenggorokan / nyeri saat menelan
                     </li>
-                    <p>Jawaban:
-                        <?php
-                        $p4 = $data['p4'];
-                        if ($data['p4'] == 25) {
-                            echo "<span class='btn btn-success'>Tidak</span>";
-                        } else {
-                            echo "<span class='btn btn-warning'>$p4</span>";
-                        } ?>
+                    <p>
+                        Jawaban: <?php
+                                    $p4 = $data['p4'];
+                                    if ($data['p4'] == 10) {
+                                        echo "<span class='btn btn-success'>Tidak</span>";
+                                    } else {
+                                        echo "<span class='btn btn-danger'>$p4</span>";
+                                    } ?>
                     </p>
                     <li>
-                        Apakah ada anggota keluarga atau tetangga sekitar tempat tinggal yang terkonfirmasi positif covid-19?
+                        Saya sedang sesak napas / kesulitan berbicara
                     </li>
-                    <p>Jawaban:
-                        <?php
-                        $p5 = $data['p5'];
-                        if ($p5 == 25) {
-                            echo "<span class='btn btn-success'>Tidak</span>";
-                        } else {
-                            echo "<span class='btn btn-warning'>$p5</span>";
-                        } ?>
+                    <p>
+                        Jawaban: <?php
+                                    $p5 = $data['p5'];
+                                    if ($p5 == 10) {
+                                        echo "<span class='btn btn-success'>Tidak</span>";
+                                    } else {
+                                        echo "<span class='btn btn-danger'>$p5</span>";
+                                    } ?>
                     </p>
                     <li>
-                        Apakah anda memiliki akses transportasi yang memungkinkan penerapan jaga jarak?
+                        Saya sedang mengalami masalah pada indera penciuman/perasa
                     </li>
-                    <p>Jawaban:
-                        <?php
-                        $p6 = $data['p6'];
-                        if ($p6 == 10) {
-                            echo "<span class='btn btn-success'>Ya</span>";
-                        } else {
-                            echo "<span class='btn btn-warning'>$p6</span>";
-                        } ?>
+                    <p>
+                        Jawaban: <?php
+                                    $p6 = $data['p6'];
+                                    if ($p6 == 10) {
+                                        echo "<span class='btn btn-success'>Tidak</span>";
+                                    } else {
+                                        echo "<span class='btn btn-danger'>$p6</span>";
+                                    } ?>
                     </p>
                     <li>
-                        Apakah anda bersedia untuk mematuhi dan melaksanakan segala bentuk pencegahan dengan protokol kesehatan covid-19 yang diterapkan di lingkungan SMK Muhammadiyah Karangmojo?
+                        Dalam kurun waktu 14 hari terakhir saya mengalami sakit tertentu (seperti demam/batuk/sakit tenggorokan/sesak napas/dll)/batuk/sakit tenggorokan/sesak napas/dll)
                     </li>
-                    <p>Jawaban:
-                        <?php
-                        $p7 = $data['p7'];
-                        if ($p7 == 5) {
-                            echo "<span class='btn btn-success'>Ya</span>";
-                        } else {
-                            echo "<span class='btn btn-warning'>$p7</span>";
-                        } ?>
+                    <p>
+                        Jawaban: <?php
+                                    $p7 = $data['p7'];
+                                    if ($p7 == 10) {
+                                        echo "<span class='btn btn-success'>Tidak</span>";
+                                    } else {
+                                        echo "<span class='btn btn-danger'>$p7</span>";
+                                    } ?>
+                    </p>
+                    <li>
+                        Dalam kurun waktu 14 hari terakhir saya melakukan perjalanan ke luar kota/daerah dengan kategori zona merah
+                    </li>
+                    <p>
+                        Jawaban: <?php
+                                    $p7 = $data['p8'];
+                                    if ($p7 == 10) {
+                                        echo "<span class='btn btn-success'>Tidak</span>";
+                                    } else {
+                                        echo "<span class='btn btn-danger'>$p7</span>";
+                                    } ?>
+                    </p>
+                    <li>
+                        Dalam kurun waktu 14 hari terakhir, saya terdapat riwayat kontak (seperti bersentuhan/jabat tangan, mengobrol lama atau dalam satu ruangan) dengan orang yang sudah terkonfirmasi positif terinfeksi virus covid-19
+                    </li>
+                    <p>
+                        Jawaban: <?php
+                                    $p7 = $data['p9'];
+                                    if ($p7 == 15) {
+                                        echo "<span class='btn btn-success'>Tidak</span>";
+                                    } else {
+                                        echo "<span class='btn btn-danger'>$p7</span>";
+                                    } ?>
+                    </p>
+                    <li>
+                        Saya bersedia untuk mematuhi dan melaksanakan segala bentuk protokol kesehatan pencegahan covid-19 di lingkungan SMK Muhammadiyah Karangmojo
+                    </li>
+                    <p>
+                        Jawaban: <?php
+                                    $p7 = $data['p10'];
+                                    if ($p7 == 10) {
+                                        echo "<span class='btn btn-success'>Ya</span>";
+                                    } else {
+                                        echo "<span class='btn btn-danger'>$p7</span>";
+                                    } ?>
                     </p>
                 </ol>
             </div>
