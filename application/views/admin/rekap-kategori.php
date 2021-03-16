@@ -37,16 +37,16 @@
                             // echo $score;
                             if ($score <= 60) {
                                 echo "<span class='btn btn-danger'>$score</span>";
-                            } else if ($score < 75) {
+                            } else if ($score < 89) {
                                 echo "<span class='btn btn-warning'>$score</span>";
-                            } else if ($score >= 75) {
+                            } else if ($score >= 90) {
                                 echo "<span class='btn btn-success'>$score</span>";
                             }
                             ?>
                         </td>
                         <td>
                             <?php
-                            $score = $d['p1'] + $d['p2'] + $d['p3'] + $d['p4'] + $d['p5'] + $d['p6'] + $d['p7'];
+                            // $score = $d['p1'] + $d['p2'] + $d['p3'] + $d['p4'] + $d['p5'] + $d['p6'] + $d['p7'];
                             if ($score <= 60) {
                                 echo "<span class='btn btn-danger'>Stop</span>";
                             } else if ($score < 75) {
