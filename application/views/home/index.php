@@ -290,7 +290,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>7.	Dalam kurun waktu 14 hari terakhir saya mengalami sakit tertentu (seperti demam/batuk/sakit tenggorokan/sesak napas/dll)/batuk/sakit tenggorokan/sesak napas/dll)</label>
+                        <label>7. Dalam kurun waktu 14 hari terakhir saya mengalami sakit tertentu (seperti demam/batuk/sakit tenggorokan/sesak napas/dll)</label>
                         <select name="p7" id="p7" required>
                             <option value="">Silahkan Pilih</option>
                             <option value="Ya">Ya</option>
