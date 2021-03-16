@@ -240,62 +240,87 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Apakah saat ini anda sedang memiliki penyakit bawaan atau comorbid yang tidak terkontrol? Jika Ya, sebutkan apa penyakitnya. (misal : asma, diabetes, jantung, dll)</label>
+                        <label>1. Saya memiliki penyakit bawaan atau comorbid yang tidak terkontrol (seperti asma, diabetes, jantung, dll)</label>
                         <select name="p1" id="p1" required>
                             <option value="">Silahkan Pilih</option>
                             <option value="Ya. ">Ya</option>
                             <option value="5">Tidak</option>
                         </select>
+                        <label>Jika Ya, penyakit bawaan yang saya miliki</label>
                         <input class="form-control" type="text" name="p1_1" id="p1_1">
                     </div>
                     <div class="form-group">
-                        <label>Apakah dalam kurun waktu 14 hari terakhir anda mengalami sakit tertentu? Jika Ya, sebutkan apa sakitnya.</label>
+                        <label>2. Saya sedang demam dengan suhu badan diatas 37,3 derajat Celcius</label>
                         <select name="p2" id="p2" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="Ya. ">Ya</option>
-                            <option value="5">Tidak</option>
+                            <option value="0">Ya</option>
+                            <option value="10">Tidak</option>
                         </select>
-                        <input class="form-control" type="text" name="p2_1" id="p2_1">
                     </div>
                     <div class="form-group">
-                        <label>Apakah dalam kurun waktu 14 hari terakhir anda memiliki riwayat perjalanan dari daerah/kota dengan kategori zona Merah? Jika Ya, sebutkan riwayat perjalanannya dari kota mana saja.</label>
+                        <label>3. Saya sedang batuk</label>
                         <select name="p3" id="p3" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="Ya. ">Ya</option>
-                            <option value="25">Tidak</option>
+                            <option value="0">Ya</option>
+                            <option value="10">Tidak</option>
                         </select>
-                        <input class="form-control" type="text" name="p3_1" id="p3_1">
                     </div>
                     <div class="form-group">
-                        <label>Apakah dalam kurun waktu 14 hari terakhir anda atau keluarga anda memiliki riwayat kontak dengan orang yang terkonfirmasi positif covid-19?</label>
+                        <label>4. Saya sedang sakit tenggorokan / nyeri saat menelan</label>
                         <select name="p4" id="p4" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="Ya">Ya</option>
-                            <option value="25">Tidak</option>
+                            <option value="0">Ya</option>
+                            <option value="10">Tidak</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Apakah ada anggota keluarga atau tetangga sekitar tempat tinggal yang terkonfirmasi positif covid-19?</label>
+                        <label>5. Saya sedang sesak napas / kesulitan berbicara</label>
                         <select name="p5" id="p5" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="Ya">Ya</option>
-                            <option value="25">Tidak</option>
+                            <option value="0">Ya</option>
+                            <option value="10">Tidak</option>
                         </select>
                     </div>
                     <div class="form-group" required>
-                        <label>Apakah anda memiliki akses transportasi yang memungkinkan penerapan jaga jarak?</label>
+                        <label>6. Saya sedang mengalami masalah pada indera penciuman/perasa</label>
                         <select name="p6" id="p6">
                             <option value="">Silahkan Pilih</option>
-                            <option value="10">Ya</option>
-                            <option value="Tidak">Tidak</option>
+                            <option value="0">Ya</option>
+                            <option value="10">Tidak</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Apakah anda bersedia untuk mematuhi dan melaksanakan segala bentuk pencegahan dengan protokol kesehatan covid-19 yang diterapkan di lingkungan SMK Muhammadiyah Karangmojo?</label>
+                        <label>7.	Dalam kurun waktu 14 hari terakhir saya mengalami sakit tertentu (seperti demam/batuk/sakit tenggorokan/sesak napas/dll)/batuk/sakit tenggorokan/sesak napas/dll)</label>
                         <select name="p7" id="p7" required>
                             <option value="">Silahkan Pilih</option>
-                            <option value="5">Ya</option>
-                            <option value="Tidak">Tidak</option>
+                            <option value="0">Ya</option>
+                            <option value="10">Tidak</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>8. Dalam kurun waktu 14 hari terakhir saya melakukan perjalanan ke luar kota/daerah dengan kategori zona merah</label>
+                        <select name="p8" id="p8" required>
+                            <option value="">Silahkan Pilih</option>
+                            <option value="0">Ya</option>
+                            <option value="10">Tidak</option>
+                        </select>
+                        <label for="">Jika Ya, kota/daerah yang saya kunjungi</label>
+                        <input class="form-control" type="text" name="p8_8" id="p8_8">
+                    </div>
+                    <div class="form-group">
+                        <label>9. Dalam kurun waktu 14 hari terakhir, saya terdapat riwayat kontak (seperti bersentuhan/jabat tangan, mengobrol lama atau dalam satu ruangan) dengan orang yang sudah terkonfirmasi positif terinfeksi virus covid-19</label>
+                        <select name="p9" id="p9" required>
+                            <option value="">Silahkan Pilih</option>
+                            <option value="0">Ya</option>
+                            <option value="15">Tidak</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>10. Saya bersedia untuk mematuhi dan melaksanakan segala bentuk protokol kesehatan pencegahan covid-19 di lingkungan SMK Muhammadiyah Karangmojo</label>
+                        <select name="p10" id="p10" required>
+                            <option value="">Silahkan Pilih</option>
+                            <option value="10">Ya</option>
+                            <option value="0">Tidak</option>
                         </select>
                     </div>
                 </div>
