@@ -203,12 +203,48 @@
                         } ?>
         </p>
         <li>
-            Apakah anda bersedia untuk mematuhi dan melaksanakan segala bentuk pencegahan dengan protokol kesehatan covid-19 yang diterapkan di lingkungan SMK Muhammadiyah Karangmojo?
+        Dalam kurun waktu 14 hari terakhir saya mengalami sakit tertentu (seperti demam/batuk/sakit tenggorokan/sesak napas/dll)/batuk/sakit tenggorokan/sesak napas/dll)
         </li>
         <p>
             Jawaban: <?php
                         $p7 = $data['p7'];
-                        if ($p7 == 5) {
+                        if ($p7 == 10) {
+                            echo "<span class='btn btn-success'>Tidak</span>";
+                        } else {
+                            echo "<span class='btn btn-danger'>$p7</span>";
+                        } ?>
+        </p>
+        <li>
+        Dalam kurun waktu 14 hari terakhir saya melakukan perjalanan ke luar kota/daerah dengan kategori zona merah
+        </li>
+        <p>
+            Jawaban: <?php
+                        $p7 = $data['p8'];
+                        if ($p7 == 10) {
+                            echo "<span class='btn btn-success'>Tidak</span>";
+                        } else {
+                            echo "<span class='btn btn-danger'>$p7</span>";
+                        } ?>
+        </p>
+        <li>
+        Dalam kurun waktu 14 hari terakhir, saya terdapat riwayat kontak (seperti bersentuhan/jabat tangan, mengobrol lama atau dalam satu ruangan) dengan orang yang sudah terkonfirmasi positif terinfeksi virus covid-19
+        </li>
+        <p>
+            Jawaban: <?php
+                        $p7 = $data['p9'];
+                        if ($p7 == 15) {
+                            echo "<span class='btn btn-success'>Tidak</span>";
+                        } else {
+                            echo "<span class='btn btn-danger'>$p7</span>";
+                        } ?>
+        </p>
+        <li>
+        Saya bersedia untuk mematuhi dan melaksanakan segala bentuk protokol kesehatan pencegahan covid-19 di lingkungan SMK Muhammadiyah Karangmojo
+        </li>
+        <p>
+            Jawaban: <?php
+                        $p7 = $data['p10'];
+                        if ($p7 == 10) {
                             echo "<span class='btn btn-success'>Ya</span>";
                         } else {
                             echo "<span class='btn btn-danger'>$p7</span>";
