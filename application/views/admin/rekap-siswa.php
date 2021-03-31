@@ -4,14 +4,14 @@
             <h5 class="card-title">Daftar Rekap Siswa Kelas <?= $kls; ?> Tanggal <?= tgl2($date); ?></h5>
         </div>
         <form action="" method="get">
-            <select name="kelas" id="kelas">
+            <select class="form-control" style="width: 20%;margin-left:10px;" name="kelas" id="kelas">
                 <option value="">Pilih Kelas</option>
                 <?php foreach ($kelas as $k) : ?>
                     <option value="<?= $k['kelas']; ?>"><?= $k['kelas']; ?></option>
                 <?php endforeach; ?>
             </select>
-            <input type="date" name="date" id="date">
-            <button type="submit"> view</button>
+            <input class="form-control mt-2" style="width: 20%;margin-left:10px;" type="date" name="date" id="date">
+            <button class="btn btn-primary mt-2" style="margin-left:10px;" type="submit"> view</button>
         </form>
         <table class="table table-striped">
             <thead>
@@ -91,6 +91,8 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <a href="<?= base_url('admin/ctk_siswa?kelas=') . $kls . "&date=" . $date; ?>"><button class="btn btn-danger"><i class="fa fa-file-pdf" aria-hidden="true"> pdf</i></button></a>
+        <div class="container mt-3">
+            <a href="<?= base_url('admin/ctk_siswa?kelas=') . $kls . "&date=" . $date; ?>"><button class="btn btn-danger"><i class="fa fa-file-pdf" aria-hidden="true"> PDF</i></button></a>
+        </div>
     </div>
 </div>

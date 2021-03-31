@@ -4,14 +4,14 @@
             <h5 class="card-title">Daftar Rekap kategori Responden Tanggal <?= tgl2($date); ?></h5>
         </div>
         <form action="" method="get">
-            <select name="kategori" id="kategori">
+            <select class="form-control" style="width: 20%;margin-left:10px;" name="kategori" id="kategori">
                 <option value="">Pilih Kategori</option>
                 <?php foreach ($kategori as $k) : ?>
                     <option value="<?= $k['id']; ?>"><?= $k['nama']; ?></option>
                 <?php endforeach; ?>
             </select>
-            <input type="date" name="date" id="date">
-            <button type="submit"> view</button>
+            <input class="form-control mt-2" style="width: 20%;margin-left:10px;" type="date" name="date" id="date">
+            <button class="btn btn-primary mt-2" style="margin-left:10px;" type="submit"> view</button>
         </form>
         <table class="table table-striped">
             <thead>
@@ -64,6 +64,8 @@
                 <?php endforeach; ?>
             </tbody>
         </table>
-        <a href="<?= base_url('admin/ctk_siswa?kelas=') . $ktgr . "&date=" . $date; ?>"><button class="btn btn-danger"><i class="fa fa-file-pdf" aria-hidden="true"> pdf</i></button></a>
+        <div class="container mt-3">
+            <a href="<?= base_url('admin/ctk_siswa?kelas=') . $ktgr . "&date=" . $date; ?>"><button class="btn btn-danger"><i class="fa fa-file-pdf" aria-hidden="true"> PDF</i></button></a>
+        </div>
     </div>
 </div>

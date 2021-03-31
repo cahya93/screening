@@ -16,7 +16,8 @@ class Count_model extends CI_Model
     {
         $sql = "SELECT  count(if(kategori='1', kategori, NULL)) as siswa,
                         count(if(kategori='2', kategori, NULL)) as guru,
-                        count(if(kategori='3', kategori, NULL)) as karyawan
+                        count(if(kategori='3', kategori, NULL)) as karyawan,
+                        count(if(kategori='4', kategori, NULL)) as umum
                 FROM tbl_screening";
         $result = $this->db->query($sql);
         return $result->row();
