@@ -49,7 +49,7 @@
                     backgroundColor: gradient,
                     borderColor: window.theme.primary,
                     data: [
-                        2115,
+                        1115,
                         1562,
                         1584,
                         1892,
