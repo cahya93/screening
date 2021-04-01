@@ -4,7 +4,7 @@
             <h5 class="card-title">Daftar Rekap Siswa Kelas <?= $kls; ?> Tanggal <?= tgl2($date); ?></h5>
         </div>
         <form action="" method="get">
-            <select class="form-control" style="width: 20%;margin-left:10px;" name="kelas" id="kelas">
+            <select class="form-select" style="width: 20%;margin-left:10px;" name="kelas" id="kelas">
                 <option value="">Pilih Kelas</option>
                 <?php foreach ($kelas as $k) : ?>
                     <option value="<?= $k['kelas']; ?>"><?= $k['kelas']; ?></option>

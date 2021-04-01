@@ -4,7 +4,7 @@
             <h5 class="card-title">Daftar Rekap kategori Responden Tanggal <?= tgl2($date); ?></h5>
         </div>
         <form action="" method="get">
-            <select class="form-control" style="width: 20%;margin-left:10px;" name="kategori" id="kategori">
+            <select class="form-select" style="width: 20%;margin-left:10px;" name="kategori" id="kategori">
                 <option value="">Pilih Kategori</option>
                 <?php foreach ($kategori as $k) : ?>
                     <option value="<?= $k['id']; ?>"><?= $k['nama']; ?></option>
