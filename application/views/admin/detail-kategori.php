@@ -21,6 +21,11 @@ $kelas = $this->db->get_where('tbl_kelas', ['id' => $data['kelas']])->row_array(
                         <th><?= $data['alamat']; ?></th>
                     </tr>
                     <tr>
+                        <th>Tanggal</th>
+                        <th>:</th>
+                        <th><?= format_indo($data['timestamp']); ?></th>
+                    </tr>
+                    <tr>
                         <th>Total Score</th>
                         <th>:</th>
                         <th>
