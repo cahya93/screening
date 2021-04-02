@@ -22,10 +22,19 @@ class Home extends CI_Controller
             $this->load->view('home/index.php', $data);
             $this->load->view('home/wrapper/footer.php', $data);
         } else {
+            $no_id = $this->input->post('no_id');
+            $date = date('Y-m-d');
             $this->Home->tbh_screening();
             $this->session->set_flashdata('message', ' <div class="alert alert-success" role="alert">Screening Anda berhasil dianalisa!!!</br>Untuk melihat hasil screening Anda silahkan <a href="home/dftr_scr"><b style:"color:blue;">KLIK SINI</b></a></div>');
-            redirect('home');
+            redirect('home/ctk_hsl?no_id=' . $no_id . '&date=' . $date);
         }
+    }
+    public function ctk_hsl()
+    {
+        $no_id = $this->input->get('no_id');
+        $date = $this->input->get('date');
+        $data['data'] = $this->db->get_where('tbl_screening', ['no_id' => $no_id, 'date' => $date])->row_array();
+        $this->load->view('home/ctk_hsl', $data);
     }
 
     public function dftr_scr()
