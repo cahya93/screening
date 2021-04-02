@@ -16,7 +16,7 @@
 <body>
     <div class="container">
         <div class="card">
-            <h2 style="text-align:center;font-weight:bolder">Hasil Screening</h2>
+            <h2 style="text-align:center;font-weight:bolder">Kartu Hasil Screening</h2>
             <table class="table">
                 <thead style="text-align:left">
                     <tr>
@@ -68,7 +68,7 @@
                     </tr>
                 </thead>
             </table>
-            <p style="text-align: center;font-size: 20px;font-weight:bolder">
+            <p style="text-align: center;font-size: 20px;font-weight:bolder;margin-top:15px;">
                 <?php
                 $waspada = "<i style='text-transform: uppercase;'><b>Maka Anda dinyatakan harus isolasi mandiri. Jangan bepergian, bekerja dan belajar dari rumah saja.</b></i>";
                 $aman = "<i style='text-transform: uppercase;'>ANDA DINYATAKAN SEHAT, IN SYAA ALLAH. JIKA ANDA JUJUR MENGISI INSTRUMEN INI</i>";
@@ -85,6 +85,16 @@
             <p style="text-align:center;font-size: 20px;">
                 <i style='text-transform: uppercase;'>Info lebih lanjut hubungi SATGAS COVID Sekolah<br /> di nomor WA <a href='https://wa.me/6285729598484?text=Assamualaikum,%20saya%20butuh%20informasi%20mengenai%20hasil%20screening%20Saya...'>085729598484 (Pak Ahsan)</a></i>
                 <i style='text-transform: uppercase;'>dan <a href='https://wa.me/6288225237456?text=Assamualaikum,%20saya%20butuh%20informasi%20mengenai%20hasil%20screening%20Saya...'>0882-2523-7456 (Bu Dwinana)</a></i>
+            </p>
+            <p style="text-transform: uppercase;margin-left:10px;margin-bottom:0;">
+                Catatan:<br />
+                <b>
+                    <ol style="margin-top: 0;">
+                        <li>Kartu ini hanya bisa di akses 1x yaitu setelah anda mengisi screening</li>
+                        <li>Silahkan di Sreenshoot dan tunjukan kepada petugas piket saat anda memasuki lingkungan SMK Muhammadiyah Karangmojo</li>
+                        <li>Masa berlaku kartu ini hanya 1 (satu) hari</li>
+                    </ol>
+                </b>
             </p>
         </div>
     </div>
