@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-2">
         <div class="card">
-            <h2 style="text-align:center;font-weight:bolder">Kartu Hasil Screening</h2>
+            <h2 style="text-align:center;font-weight:bolder;margin-top:7px;">Kartu Hasil Screening</h2>
             <table class="table">
                 <thead style="text-align:left">
                     <tr>
