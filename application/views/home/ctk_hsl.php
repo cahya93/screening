@@ -16,14 +16,11 @@
 <body>
     <div class="container mt-2">
         <div class="card">
-            <h2 style="text-align:center;font-weight:bolder;margin-top:7px;">Kartu Hasil Screening</h2>
+            <h2 style="text-align:center;font-weight:bolder;margin-top:7px;margin-bottom:0;"><u>Kartu Hasil Screening</u></h2>
+            <h3 style="text-align:center;font-weight:bolder;margin-top:0;">Nomor : <?= $data['id']; ?>/SATGAS/MUHKA/2021</h3>
+            <h4 style="text-align:right;font-weight:bolder;margin-top:0;margin-right:10px;"><?= format_indo($data['timestamp']); ?></h4>
             <table class="table">
                 <thead style="text-align:left">
-                    <tr>
-                        <th width="180px">Tanggal Screening</th>
-                        <th width="5px">:</th>
-                        <th><?= format_indo($data['timestamp']); ?></th>
-                    </tr>
                     <tr>
                         <th>No. Identitas</th>
                         <th>:</th>
