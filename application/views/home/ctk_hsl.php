@@ -20,8 +20,13 @@
             <table class="table">
                 <thead style="text-align:left">
                     <tr>
-                        <th width="150px">No. Identitas</th>
+                        <th width="180px">Tanggal Screening</th>
                         <th width="5px">:</th>
+                        <th><?= format_indo($data['timestamp']); ?></th>
+                    </tr>
+                    <tr>
+                        <th>No. Identitas</th>
+                        <th>:</th>
                         <th><?= $data['no_id']; ?></th>
                     </tr>
                     <tr>
@@ -78,7 +83,7 @@
                 ?>
             </p>
             <p style="text-align:center;font-size: 20px;">
-                <i style='text-transform: uppercase;'>Info lebih lanjut hubungi SATGAS COVID Sekolah di nomor WA <a href='https://wa.me/6285729598484?text=Assamualaikum,%20saya%20butuh%20informasi%20mengenai%20hasil%20screening%20Saya...'>085729598484 (Pak Ahsan)</a></i>
+                <i style='text-transform: uppercase;'>Info lebih lanjut hubungi SATGAS COVID Sekolah<br /> di nomor WA <a href='https://wa.me/6285729598484?text=Assamualaikum,%20saya%20butuh%20informasi%20mengenai%20hasil%20screening%20Saya...'>085729598484 (Pak Ahsan)</a></i>
                 <i style='text-transform: uppercase;'>dan <a href='https://wa.me/6288225237456?text=Assamualaikum,%20saya%20butuh%20informasi%20mengenai%20hasil%20screening%20Saya...'>0882-2523-7456 (Bu Dwinana)</a></i>
             </p>
         </div>
