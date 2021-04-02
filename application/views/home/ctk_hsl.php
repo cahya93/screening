@@ -70,7 +70,7 @@
             </table>
             <p style="text-align: center;font-size: 20px;font-weight:bolder;margin-top:15px;">
                 <?php
-                $waspada = "<i style='text-transform: uppercase;'><b>Maka Anda dinyatakan harus isolasi mandiri. Jangan bepergian, bekerja dan belajar dari rumah saja.</b></i>";
+                $waspada = "<i style='text-transform: uppercase;'><b>Anda dinyatakan harus isolasi mandiri. Jangan bepergian, bekerja dan belajar dari rumah saja.</b></i>";
                 $aman = "<i style='text-transform: uppercase;'>ANDA DINYATAKAN SEHAT, IN SYAA ALLAH. JIKA ANDA JUJUR MENGISI INSTRUMEN INI</i>";
                 // $info = "<i style='text-transform: uppercase;'><b>Info lebih lanjut hubungi SATGAS COVID Sekolah di nomor WA <a href='https://wa.me/6285729598484?text=Assamualaikum,%20saya%20butuh%20informasi%20mengenai%20hasil%20screening%20Saya...'>085729598484 (Pak Ahsan)</a> </b></i>";
                 // $info2 = "<i style='text-transform: uppercase;'><b>dan <a href='https://wa.me/6288225237456?text=Assamualaikum,%20saya%20butuh%20informasi%20mengenai%20hasil%20screening%20Saya...'>0882-2523-7456 (Bu Dwinana)</a></b></i>";
