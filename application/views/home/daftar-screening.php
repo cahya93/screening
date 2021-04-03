@@ -66,22 +66,31 @@
                 <tr>
                     <td scope="row">1</td>
                     <td>Umum</td>
-                    <td> <?= $count->umum; ?> Orang</td>
+                    <td><?= $count->umum; ?> Orang</td>
                 </tr>
                 <tr>
                     <td scope="row">2</td>
                     <td>Guru</td>
-                    <td> <?= $count->guru; ?> Orang</td>
+                    <td><?= $count->guru; ?> Orang</td>
                 </tr>
                 <tr>
                     <td scope="row">3</td>
                     <td>Karyawan</td>
-                    <td> <?= $count->karyawan; ?> Orang</td>
+                    <td><?= $count->karyawan; ?> Orang</td>
                 </tr>
                 <tr>
                     <td scope="row">4</td>
                     <td>Siswa</td>
-                    <td> <?= $count->siswa; ?> Orang</td>
+                    <td><?= $count->siswa; ?> Orang</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Total Respoonden</td>
+                    <td>
+                        <?php
+                        $result = $count->umum + $count->guru + $count->karyawan + $count->siswa;
+                        echo $result . " Orang";
+                        ?>
+                    </td>
                 </tr>
             </tbody>
         </table>
