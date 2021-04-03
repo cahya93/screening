@@ -59,7 +59,7 @@
                 <tr>
                     <th>No</th>
                     <th>Kategori</th>
-                    <th>Jumlah</th>
+                    <th>Jumlah Responden</th>
                 </tr>
             </thead>
             <tbody>
