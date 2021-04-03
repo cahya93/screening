@@ -65,8 +65,6 @@
                         <th>Nama</th>
                         <th>Alamat</th>
                         <th>Kategori</th>
-                        <th>Kelas</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -83,15 +81,15 @@
                                 echo $kategori['nama'];
                                 ?>
                             </td>
-                            <td>
+                            <!-- <td>
                                 <?php
                                 $kelas = $this->db->get_where('tbl_kelas', ['id' => $d['kelas']])->row_array();
                                 echo $kelas['kelas'];
                                 ?>
-                            </td>
-                            <td>
+                            </td> -->
+                            <!-- <td>
                                 <a href="<?= base_url('home/cetak_kartu/') . $d['id']; ?>"><button class="btn btn-primary">CETAK</button></a>
-                            </td>
+                            </td> -->
                         </tr>
                         <?php $no++; ?>
                     <?php endforeach; ?>
