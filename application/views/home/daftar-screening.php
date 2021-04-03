@@ -84,7 +84,7 @@
                     <td><?= $count->siswa; ?> Orang</td>
                 </tr>
                 <tr>
-                    <td colspan="2">Total Respoonden</td>
+                    <td colspan="2">Total Responden</td>
                     <td>
                         <?php
                         $result = $count->umum + $count->guru + $count->karyawan + $count->siswa;
