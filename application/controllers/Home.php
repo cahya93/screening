@@ -8,6 +8,7 @@ class Home extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('Home_model', 'Home');
+        $this->load->model('Count_model');
     }
 
     public function index()
@@ -41,6 +42,7 @@ class Home extends CI_Controller
     {
         $data['kategori'] = $this->db->get_where('tbl_kategori')->result_array();
         $data['data'] = $this->Home->getDataSCR();
+        $data['count'] = $this->Count_model->Count();
 
         $this->load->view('home/wrapper/head.php');
         $this->load->view('home/wrapper/header.php', $data);

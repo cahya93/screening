@@ -54,6 +54,37 @@
                 <h1 class="protect_taital">Tabel Responden</h1>
             </div>
         </div>
+        <table class="table table-striped table-inverse table-responsive">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>No</th>
+                    <th>Kategori</th>
+                    <th>Jumlah</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>Umum</td>
+                    <td> <?= $count->umum; ?> Orang</td>
+                </tr>
+                <tr>
+                    <td scope="row">2</td>
+                    <td>Guru</td>
+                    <td> <?= $count->guru; ?> Orang</td>
+                </tr>
+                <tr>
+                    <td scope="row">3</td>
+                    <td>Karyawan</td>
+                    <td> <?= $count->karyawan; ?> Orang</td>
+                </tr>
+                <tr>
+                    <td scope="row">4</td>
+                    <td>Siswa</td>
+                    <td> <?= $count->siswa; ?> Orang</td>
+                </tr>
+            </tbody>
+        </table>
         <div class="table-responsive">
             <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
@@ -61,7 +92,7 @@
                 <thead>
                     <tr>
                         <th>No.</th>
-                        <th>Tanggal</th>
+                        <th width="150px">Tanggal</th>
                         <th>Nama</th>
                         <th>Alamat</th>
                         <th>Kategori</th>
@@ -74,7 +105,7 @@
                             <td scope="row"><?= $no; ?></td>
                             <td><?= tanggal($d['date']); ?></td>
                             <td><?= $d['nama']; ?></td>
-                            <td width="100px"><?= $d['alamat']; ?></td>
+                            <td><?= $d['alamat']; ?></td>
                             <td>
                                 <?php
                                 $kategori = $this->db->get_where('tbl_kategori', ['id' => $d['kategori']])->row_array();
